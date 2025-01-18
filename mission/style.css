@@ -1,0 +1,50 @@
+.dark {
+    background-color: #333;
+    color: white;
+}
+.dark header h2 {
+       color: #A0D4ED;
+}
+
+body {
+    font-size: 20px;
+    font-family: 'Times New Roman';
+}
+
+.title {
+    border-bottom: 1px solid rgb(173, 173, 173);
+}
+
+.title h1, .title h2{
+    font-weight: 400 ;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+.content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 0.8px solid rgb(173, 173, 173);
+    padding: 80px;
+}
+.title > h2{
+    color: #006EB6;
+    font-size: 20px;
+}
+
+.logo {
+
+    max-width: 150px;
+    height: auto;
+    width: 100%;
+}
+main {
+    text-align: left;
+}
+main p {
+    font-size: 18px;
+}
+main li {
+    padding-bottom: 20px;
+}
