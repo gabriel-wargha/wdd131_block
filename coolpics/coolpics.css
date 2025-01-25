@@ -9,6 +9,10 @@
 --secondary-font: Mooli, san-serif;
 }
 
+main h1 {
+    text-align: center;
+}
+
 .viewer {
     position: fixed;
     top: 0;
