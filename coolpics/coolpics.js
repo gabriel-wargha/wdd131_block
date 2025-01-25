@@ -44,8 +44,7 @@ function viewHandler(event) {
 }
 
 const gallery = document.querySelector('.gallery');
-addEventListener('click', viewHandler);
-
+gallery.addEventListener('click', viewHandler);
 function closeViewer() {
 	const viewer = document.querySelector('.viewer');
 	viewer.remove();
