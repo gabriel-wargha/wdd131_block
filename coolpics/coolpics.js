@@ -27,17 +27,14 @@ function viewerTemplate(pic, alt) {
 }
 
 function viewHandler(event) {
-  // create a variable to hold the element that was clicked on from event.target
+  
   const clicked = event.target;
-  // get the src attribute from that element and 'split' it on the "-"
-  const parts = clicked.src.split('-');
-  // construct the new image file name by adding "-full.jpeg" to the first part of the array from the previous step
-  const imgName = parts[1].split('.');
-  const fullIMagePath = './assets/image-' + imgName[0] + '-full.jpeg';
-  // insert the viewerTemplate into the top of the body element
-  const template = viewerTemplate(fullIMagePath, clicked.alt);
+  const url = new URL(clicked.src);
+  const parts = url.pathname.split('-');
+  const imgName = parts[1].split('.')[0];
+  const fullImagePath = `${url.origin}${parts[0]}-${imgName}-full.jpeg`;
+  const template = viewerTemplate(fullImagePath, clicked.alt);
   document.body.insertAdjacentHTML('afterbegin', template);
-
   // add a listener to the close button (X) that calls a function called closeView
   const close = document.querySelector('.close-viewer');
   close.addEventListener('click', closeViewer);
