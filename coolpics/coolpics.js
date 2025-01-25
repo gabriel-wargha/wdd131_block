@@ -33,7 +33,7 @@ function viewHandler(event) {
   const parts = clicked.src.split('-');
   // construct the new image file name by adding "-full.jpeg" to the first part of the array from the previous step
   const imgName = parts[1].split('.');
-  const fullIMagePath = '/assets/image-' + imgName[0] + '-full.jpeg';
+  const fullIMagePath = './assets/image-' + imgName[0] + '-full.jpeg';
   // insert the viewerTemplate into the top of the body element
   const template = viewerTemplate(fullIMagePath, clicked.alt);
   document.body.insertAdjacentHTML('afterbegin', template);
