@@ -27,17 +27,23 @@ function viewerTemplate(pic, alt) {
 }
 
 function viewHandler(event) {
-
-  const clicked = event.target;
-  const url = new URL(clicked.src);
-  const parts = url.pathname.split('/');
-  const filename = parts.pop();
-  const [name, ext] = filename.split('.');
-  const fullImagePath = `${url.origin}${parts.join('/')}/${name}-full.${ext}`;
-  const template = viewerTemplate(fullImagePath, clicked.alt);
-  document.body.insertAdjacentHTML('afterbegin', template);
   
-  // add a listener to the clssose button (X) that calls a function called closeView
+  const clicked = event.target;
+
+  const url = clicked.src;
+
+  const parts = url.split('/');
+
+  const lastItem = parts.pop();
+
+  const imgName = lastItem.split('.')[0];
+
+  const fullImagePath = `./assets/${imgName}-full.jpeg`;
+
+  const template = viewerTemplate(fullImagePath, clicked.alt);
+
+  document.body.insertAdjacentHTML('afterbegin', template);
+  // add a listener to the close button (X) that calls a function called closeView
   const close = document.querySelector('.close-viewer');
   close.addEventListener('click', closeViewer);
 }
