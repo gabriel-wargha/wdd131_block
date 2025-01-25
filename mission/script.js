@@ -1,6 +1,7 @@
 const select = document.querySelector('#theme-select');
 
 select.addEventListener('change', changeTheme);
+
 function changeTheme() {
 	const selectedValue = document.getElementById('theme-select').value;
 	if (selectedValue == 'dark') {
