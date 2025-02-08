@@ -23,7 +23,7 @@
 
                 <div class="cardNumber">
                     <label for="cardNumber">CARD NUMBER</label>
-                    <input type="number" name= "cardNumber" required>
+                    <input id="cardNumber" type="text" name="cardNumber" maxlength="16" pattern="[0-9]{16}" required>
                 </div>
 
                 <div class="cardHolder">
@@ -33,8 +33,24 @@
 
                 <div class="expiration">
                     <label for="Expiration-date">EXPIRATION</label>
-                    <input type="number" placeholder="MM" maxlength="2" required>
-                    <input type="number" placeholder="YY" maxlength="2" required>
+
+                    <!-- Month -->
+                    <select name="month" id="month">
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+
+                    <input type="number" id="year" name="year" placeholder="YYYY" required min="2025">
                 </div>
 
 
@@ -54,6 +70,7 @@
         
     </div>
     <div class="errorMsg"></div>
+    <p id="result"></p>
     </main>
     
 </body>
