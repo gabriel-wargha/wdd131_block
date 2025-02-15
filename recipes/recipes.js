@@ -293,7 +293,7 @@ function RecipeTemplate(recipes) {
 	return `
 	<img src="${recipes.image}" alt="">
 	<div class="text-content">
-	<p>${generateTags(recipes.tags)}</p>
+	<div class="type"><p>${generateTags(recipes.tags)}</p></div>
     	<div class="especial-name"><h1>${recipes.name}</h1></div>
         <span class= "rating" role="img" aria-label="Rating: ${
 					recipes.rating
@@ -306,7 +306,7 @@ function RecipeTemplate(recipes) {
 }
 
 function generateTags(tags) {
-	return tags.map((tag) => `<span class="tag">${tag}</span>`).join('');
+	return tags.map((tag) => `<span class="tag">${tag} </span>`).join('');
 }
 
 function generateRating(rating) {
