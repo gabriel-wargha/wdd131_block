@@ -2,8 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* General and text ------------------------------------------------------------------------------------------------------------------------------- */
+
+:root {
+    --primary-color: white;
+    --secondary-color: #005ba1;
+    --highlight-color: rgb(255, 224, 48);
+}
+
+.dark-theme{
+    --primary-color: #111425;
+    --secondary-color: white;
+    --highlight-color: rgb(0, 78, 202);
+}
+
 body{
-    background-color: white;
+    background-color: var(--primary-color);
     margin: 0;
 }
 
@@ -42,7 +55,7 @@ p {
 header{
     display: grid;
     grid-template-columns: auto 1fr auto;
-    background-color: white;
+    background-color: var(--secondary-color);
     opacity: 0.85;
 }
 
@@ -58,14 +71,14 @@ nav {
 nav a {
     text-decoration: none;
     font-weight: bold;
-    color: #005ba1;
+    color: var(--primary-color)
 }
 
 
 nav a:hover {
     text-decoration: none;
     font-weight: bold;
-    color: #000000;
+    color: var(--highlight-color)
 
 }
 
@@ -80,45 +93,26 @@ nav a:hover {
     text-align: center;
     align-self: center;
     padding: 20px;
-    color: #005ba1;
+    color: var(--primary-color);
     font-weight: bold;
     text-decoration: none;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--secondary-color)
 }
 
 .button a:hover{
     text-align: center;
     align-self: center;
     padding: 20px;
-    color: rgb(192, 163, 0);
+    color: var(--highlight-color);
     font-weight: bold;
     text-decoration: none;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--secondary-color)
 }
 
 /* Dark mode button and styles ------------------------------------------------------------------------------- */
-
-#dark-mode-button{
-    grid-column: 1/2;
-    grid-row: 1/2;
-    margin: 10px;
-}
-.dark-mode-label{
-    width: 45px;
-    height: 30px;
-    border-radius: 25px;
-    background-color: #ebebeb;
-    position: relative;
+#icon {
+    width: 25px;
     cursor: pointer;
-    display: block;
-    box-shadow: inset 0px, 5px, 15px rgba(0, 0, 0, 0.4), inset 0px, -5px, 15px rgba(255, 255, 255, 0.4);
-
-}
-
-.dark-mode-label:after{
-    content: "";
-    width: 45px;
-    height: 30px;
 }
 
 /* Hero ------------------------------------------------------------------------------------------------------------------------------------- */
@@ -128,7 +122,8 @@ nav a:hover {
     grid-template-columns: auto 1fr 1fr 1fr;
     grid-template-rows: 4fr;
     height: 800px;
-    background: linear-gradient(#005ba1, rgb(0, 26, 45));
+    background-color: var(--primary-color)
+    /* background: linear-gradient(#005ba1, rgb(0, 26, 45)); */
 }
 
 
@@ -138,12 +133,13 @@ nav a:hover {
     grid-column: 1/5;
     grid-row: 1/4;
     text-align: center;
-    color: white;
+    /* color: white; */
+    color: var(--secondary-color);
     padding: 10px;
     z-index: 0;
 }
 .hero-text h3 {
-    color: #f0f0f0;
+    color: var(--secondary-color)
 }
 .hero-text p 
 {
@@ -174,10 +170,10 @@ nav a:hover {
     text-align: center;
     align-self: center;
     padding: 20px;
-    color: #005ba1;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: bold;
     text-decoration: none;
-    background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
 
@@ -185,7 +181,7 @@ nav a:hover {
     text-align: center;
     align-self: center;
     padding: 20px;
-    color: rgb(192, 163, 0);
+    color: var(--highlight-color);
     font-weight: bold;
     text-decoration: none;
     border-radius: 10px;
@@ -196,6 +192,7 @@ nav a:hover {
 .hero-2{
     display: grid;
     grid-template-columns: 50% 50%;
+    background-color: var(--primary-color)
 }
 .about img {
     width: 100%;
@@ -208,7 +205,8 @@ nav a:hover {
     justify-content: center;
     display: grid;
     text-align: center;
-    color: #005ba1;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
     align-content: center;
     margin: auto 20px;
 }
@@ -218,7 +216,7 @@ nav a:hover {
 }
 
 .hero-2 p {
-    color: #000000;
+    color: var(--secondary-color)
 }
 
 
@@ -228,10 +226,10 @@ margin: 50px 15px;
 
 .button-2 a {
     padding: 20px;
-    color: white;
+    color: var(--primary-color);
     font-weight: bold;
     text-decoration: none;
-    background-color: #005ba1;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     max-width: 50px;
 }
@@ -239,20 +237,10 @@ margin: 50px 15px;
     text-align: center;
     align-self: center;
     padding: 20px;
-    color: rgb(192, 163, 0);
+    color: var(--highlight-color);
     font-weight: bold;
     text-decoration: none;
     border-radius: 10px;
-}
-
-.hero-3{
-    background: linear-gradient(#005ba1, rgb(0, 26, 45));
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-.hero-3 h2, .hero-3 p {
-    color: white;
 }
 
 /* Footer -------------------------------------------------------------------------------------------------------------------------------------------------- */
