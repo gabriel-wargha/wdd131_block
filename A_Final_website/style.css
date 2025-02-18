@@ -10,7 +10,7 @@
 }
 
 .dark-theme{
-    --primary-color: #111425;
+     --primary-color: #111425;
     --secondary-color: white;
     --highlight-color: rgb(0, 78, 202);
 }
@@ -61,10 +61,10 @@ header{
 
 nav {
     margin-left: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-items: center;
+    justify-content: space-between;
 
 }
 

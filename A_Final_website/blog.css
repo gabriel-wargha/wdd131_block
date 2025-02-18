@@ -59,10 +59,10 @@ header{
 
 nav {
     margin-left: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-items: center;
+    justify-content: space-between;
 
 }
 
@@ -132,7 +132,7 @@ nav a:hover {
 
 .blog {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column: 2/3;
     gap: 20px;
@@ -141,16 +141,14 @@ nav a:hover {
 }
 .post {
     border: 1px solid var(--secondary-color); 
-    height: 500px;
+    height: auto;
     display: grid;
 }
 
 .post img {
-    padding: 0;
     width: 100%;
-    margin: 0;
+    height: auto;
     box-shadow: 1px 1px 1px gray;
-    row-gap: 0;
 
 }
 
@@ -159,9 +157,8 @@ nav a:hover {
 }
 
 .post-text {
+    text-align: center;
     padding: 0 20px 20px 20px;
-    grid-row: 2/3;
-    text-align: center
 }
 
 .post-text p {
@@ -180,8 +177,18 @@ nav a:hover {
     color: var(--secondary-color);
     border: 1px solid var(--highlight-color);
 }
+/* Find ------------------------------------------------------------------------------------------------------------- */
+
+.find label {
+    font-size: 20;
+}
+
+.find input{
+    width: 50%;
+}
 
 /* Footer ------------------------------------------------------------------------------------------------------ */
+
 
 footer {
     display: grid;
@@ -211,15 +218,22 @@ footer {
 }
 
 .social{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-column: 3/4;
+    display: flex;
     align-items: center;
     justify-items: center;
+    margin: auto;
+}
+
+.social a {
+    padding: 5px;
 }
 
 .social img {
     max-height: 30px;
 }
+
+
 
 .final{
     margin-top: 10px;
@@ -238,3 +252,15 @@ footer {
     color: #000000;
 }
 
+
+@media screen and (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    .blog{
+        grid-template-columns: 1fr;
+    }
+
+}
