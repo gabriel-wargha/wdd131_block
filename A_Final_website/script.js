@@ -57,7 +57,7 @@ let container = document.getElementById('posts-container');
 posts.forEach((post) => {
 	const postHTML = ` <div class="post">
     <div class="images">
-            <img src="${post.img_src}" alt="">
+            <img src="${post.img_src}" alt="Post Image" loading="lazy">
             </div>
 
         <div class="post-text">
