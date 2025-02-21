@@ -60,11 +60,10 @@ header{
 }
 
 nav {
-    margin-left: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
 }
 
@@ -192,7 +191,8 @@ nav a:hover {
 .hero-2{
     display: grid;
     grid-template-columns: 50% 50%;
-    background-color: var(--primary-color)
+    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
 }
 .about img {
     width: 100%;
@@ -305,4 +305,37 @@ footer {
     font-size: small;
     text-decoration: none;
     color: #000000;
+}
+
+@media screen and (max-width: 900px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav a {
+        margin: 20px;
+    }
+
+
+    .hero-img {
+        display: none;
+    }
+
+    .hero-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .hero-button{
+        display: none
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
