@@ -5,8 +5,8 @@ let icon = document.querySelector('#icon');
 icon.addEventListener('click', () => {
 	document.body.classList.toggle('dark-theme');
 	if (document.body.classList.contains('dark-theme')) {
-		icon.src = './Images/sun.png';
+		icon.src = './images/sun.png';
 	} else {
-		icon.src = './Images/moon-dark-theme.svg';
+		icon.src = './images/moon-dark-theme.svg';
 	}
 });
