@@ -1,32 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-/* General and text ------------------------------------------------------------------------------------------------------------------------------- */
-
+/* Font optimization */
 :root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --primary-color: white;
     --secondary-color: #005ba1;
     --highlight-color: rgb(255, 224, 48);
 }
 
-.dark-theme{
-     --primary-color: #111425;
+.dark-theme {
+    --primary-color: #111425;
     --secondary-color: white;
     --highlight-color: rgb(0, 78, 202);
 }
 
-body{
+body {
     background-color: var(--primary-color);
     margin: 0;
 }
 
+/* General and text */
 a, p {
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", system-ui, -apple-system, sans-serif;
+    text-rendering: optimizeSpeed;
+    font-display: swap;
 }
 
 h1, h2, h3 {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-family: "Roboto", system-ui, -apple-system, sans-serif;
     font-weight: bold;
+    text-rendering: optimizeLegibility;
+    font-display: swap;
 }
 
 h1 {
@@ -40,6 +42,12 @@ p {
     font-size: 20px;
 }
 
+/* Optional: Add this if you want to ensure text remains visible during font loading */
+.hero-text h1,
+.hero-text h3,
+.hero-text p {
+    font-display: swap;
+}
 
 /* Header CSS ------------------------------------------------------------------------------------------------------------------------------------*/ 
 
@@ -57,6 +65,8 @@ header{
     grid-template-columns: auto 1fr auto;
     background-color: var(--secondary-color);
     opacity: 0.85;
+    padding: 0 20px;
+    align-items: center;
 }
 
 nav {
@@ -64,7 +74,7 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-
+    gap: 20px;
 }
 
 nav a {
@@ -80,7 +90,6 @@ nav a:hover {
     color: var(--highlight-color)
 
 }
-
 
 .button
 {
